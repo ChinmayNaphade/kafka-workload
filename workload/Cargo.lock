@@ -42,6 +42,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "antithesis_kafka_workload"
+version = "0.1.0"
+dependencies = [
+ "antithesis_sdk",
+ "anyhow",
+ "chrono",
+ "rand",
+ "rdkafka",
+ "rdkafka-sys",
+ "regex",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "uuid",
+]
+
+[[package]]
 name = "antithesis_sdk"
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -273,25 +292,6 @@ checksum = "1cfaf33c695fc6e08064efbc1f72ec937429614f25eef83af942d0e227c3a28f"
 dependencies = [
  "once_cell",
  "wasm-bindgen",
-]
-
-[[package]]
-name = "antithesis_kafka_workload"
-version = "0.1.0"
-dependencies = [
- "antithesis_sdk",
- "anyhow",
- "chrono",
- "rand",
- "rdkafka",
- "rdkafka-sys",
- "regex",
- "serde",
- "serde_json",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "uuid",
 ]
 
 [[package]]

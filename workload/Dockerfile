@@ -10,8 +10,10 @@ FROM docker.io/debian:bookworm-slim
 COPY --from=builder /usr/local/cargo/bin/workload /app/workload
 COPY --from=builder /usr/local/cargo/bin/validation /app/validation
 COPY --from=builder /usr/local/cargo/bin/load /app/load
+COPY --from=builder /usr/local/cargo/bin/anytime_probe /opt/antithesis/test/v1/kafka_tests/anytime_probe
 COPY scripts/docker-entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 RUN mkdir -p /app/logs
+
 WORKDIR /app
 CMD ["/app/entrypoint.sh"]

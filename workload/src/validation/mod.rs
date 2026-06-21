@@ -5,3 +5,4 @@ pub mod producer_idempotence;
 pub mod message_integrity;
 pub mod log_validator;
 pub mod workload_log;
+pub mod durability_probe;
